@@ -1,0 +1,29 @@
+.form_style {
+    width: 40%;
+    background-color: #fff;
+    box-shadow: 1px 0.5px 2px 2px;
+    border-radius: 5px;
+    margin-top: 40px;
+    padding: 25px;
+}
+.forgot_password > a{
+    text-decoration: none;
+    position: relative;
+    left: 445px;
+}
+.forgot_password > a:hover {
+    color: blue;
+    coursor: pointer;
+}
+
+.dont_have_account{
+    text-align: center;
+    margin-top: 10px;
+}
+.dont_have_account > a{
+    text-decoration: none;
+}
+
+.dont_have_account > a:hover{
+    color: blue;
+}

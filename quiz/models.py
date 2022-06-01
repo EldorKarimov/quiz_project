@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
+from accounts.models import CustomUser
+
 
 class QuizModel(models.Model):
     name = models.CharField(max_length=128)
@@ -26,7 +27,7 @@ class Answer(models.Model):
 class Result(models.Model):
     number_of_question = models.IntegerField()
     correct_question = models.IntegerField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     quiz = models.ForeignKey(QuizModel, on_delete=models.CASCADE)
     datetime = models.DateTimeField(auto_now_add=True)
 

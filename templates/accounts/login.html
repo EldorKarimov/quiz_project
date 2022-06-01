@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container form_style">
+    {% for mess in messages %}
+    <div class="alert alert-danger" role="alert">
+        {% if mess %}
+        {{ mess }}
+        {% endif %}
+    </div>
+    {% endfor %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="text" name="username" class="form-control" id="exampleInputEmail1"
+                   aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <div class="forgot_password">
+            <a href="#">forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <div class="dont_have_account">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
