@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Test Page</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% for q in questions %}
+        {{ q.name }} <br>
+        {% for answer in answers %}
+        {% if q.id == answer.question.id %}
+        <input type="radio" name="{{ q.name}}" id="{{ answer.id}}" value="{{ answer.is_right }}">
+        <label for="{{ answer.id }}">{{ answer.name }}</label><br>
+        {% endif %}
+        {% endfor %}
+        <hr>
+        {% endfor %}
+
+        <button type="submit">Finish</button>
+    </form>
+</div>
+
+{% endblock %}

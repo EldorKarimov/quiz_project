@@ -27,3 +27,10 @@
 .dont_have_account > a:hover{
     color: blue;
 }
+
+.quiz_form {
+    margin-top: 20px;
+    margin-bottom: 1rem;
+    position: relative;
+    clear: both;
+}

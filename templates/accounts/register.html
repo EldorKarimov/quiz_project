@@ -4,13 +4,13 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-6">
-            <img src="{% static 'images/abc.png' %}" alt="image" width="630px" height="700px">
+            <img src="{% static 'images/abc.png' %}" alt="image" width="630px" height="650px">
         </div>
         <div class="col-lg-6 mt-3">
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-success">Register</button>
             </form>
         </div>
     </div>

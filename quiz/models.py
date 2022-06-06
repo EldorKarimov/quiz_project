@@ -5,6 +5,8 @@ from accounts.models import CustomUser
 class QuizModel(models.Model):
     name = models.CharField(max_length=128)
     slug = models.SlugField(max_length=128, unique=True)
+    image = models.ImageField(upload_to='quiz')
+    content = models.TextField()
 
     def __str__(self):
         return self.name
